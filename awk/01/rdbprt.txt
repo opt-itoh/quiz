@@ -1,0 +1,87 @@
+NO. 1        Table name ......  在庫表
+  Database name  ...... テストＤＢ
+  Schema name    ...... STOCKS
+  Type           ...... BASE
+  Creator        ...... SUZUKI
+  Created date   ...... Mon Jan 24 17:06:25 2005
+  Updated date   ...... Tue Jan 25 10:00:30 2005
+
+  Column information
+
+    Column name          ...... 製品番号
+    NOT NULL constraint  ...... YES      Data length ...... 2(Byte)
+    Data type            ...... SMALLINT
+    Default              ......
+
+    Column name          ...... 製品名
+    NOT NULL constraint  ...... YES      Data length ...... 20(Byte)
+    Data type            ...... NATIONAL CHARACTER(10)
+    Default              ......
+
+    Column name          ...... 在庫数量
+    NOT NULL constraint  ...... NO       Data length ...... 4(Byte)
+    Data type            ...... INTEGER
+    Default              ......
+
+    Column name          ...... 倉庫番号
+    NOT NULL constraint  ...... NO       Data length ...... 2(Byte)
+    Data type            ...... SMALLINT
+    Default              ......
+
+  Constraint information
+  Primary key constraint information
+    No.       Column name
+    1         製品番号
+
+  Unique Constraint information
+    No.1           Unique constraint
+      No.         Column name
+      1           製品番号
+      2           製品名
+
+  DSO information
+    Base DSO name  ...... 在庫表ＤＳＯ
+    Index DSO information
+      No.         DSO name
+      1           製品番号ＩＸＤＳＯ
+      2           製品番号
+
+NO. 2        Table name ......  倉庫マスタ
+  Database name  ...... テストＤＢ
+  Schema name    ...... STOCKS
+  Type           ...... BASE
+  Creator        ...... SUZUKI
+  Created date   ...... Mon Jan 26 17:06:25 2005
+  Updated date   ...... Tue Jan 27 10:00:30 2005
+
+  Column information
+
+    Column name          ...... 倉庫番号
+    NOT NULL constraint  ...... YES      Data length ...... 2(Byte)
+    Data type            ...... SMALLINT
+    Default              ......
+
+    Column name          ...... 倉庫名
+    NOT NULL constraint  ...... YES      Data length ...... 20(Byte)
+    Data type            ...... NATIONAL CHARACTER(10)
+    Default              ......
+
+
+  Constraint information
+  Primary key constraint information
+    No.       Column name
+    1         倉庫番号
+
+  Unique Constraint information
+    No.1           Unique constraint
+      No.         Column name
+      1           倉庫番号
+      2           倉庫名
+
+  DSO information
+    Base DSO name  ...... 倉庫マスタＤＳＯ
+    Index DSO information
+      No.         DSO name
+      1           倉庫番号ＩＸＤＳＯ
+      2           倉庫番号
+
